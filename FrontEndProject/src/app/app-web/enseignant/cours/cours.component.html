@@ -1,0 +1,58 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Cours</title>
+</head>
+<body>
+  <!-- <div class="form-group">
+    <label for="file">Ajouter votre cours</label>
+    <input type="file"
+    name="fileUpload"
+           id="fileUpload"
+           (change)="handleFileInput($event.target.files)">
+</div> -->
+
+Version = {{version.full}} <br/>
+<input type="file" (change)="upload($event.target.files)" />
+Upload Percent: {{percentDone}}% <br />
+
+<ng-container *ngIf="uploadSuccess">
+  Upload Successful
+</ng-container> 
+
+
+<!-- <head>
+<title>Upload File Request Page</title>
+</head>
+<body>
+	<form method="POST" action="uploadFile" enctype="multipart/form-data">
+		File to upload: <input type="file" name="file"><br /> 
+		Name: <input type="text" name="name"><br /> <br /> 
+		<input type="submit" value="Upload"> Press here to upload the file!
+	</form>	
+</body> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

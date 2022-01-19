@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title> creer_un_enseignant</title>
+</head>
+
+<body>
+  <div class="classe">
+        <mat-form-field class="input">
+          <input matInput type="text" id="name" name="name" placeholder="Nom de l'enseignant" appearance="standard"
+            required minlength="4" maxlength="8" size="10"  [(ngModel)]="data.enseignant.nom">
+        </mat-form-field>
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="text" id="prenom" name="prenom" placeholder="prénom" required minlength="4" maxlength="8" size="10"  [(ngModel)]="data.enseignant.prenom">
+          </mat-form-field>
+      </tr>
+  
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="tel" id="numTel" name="numTel" placeholder="Numéro de téléphone" [(ngModel)]="data.enseignant.numTel" >
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="input"><i class="material-icons">email</i>
+          <input matInput type="email" id="email" pattern=".+@globex.com" placeholder="Email" size="30" required  [(ngModel)]="data.enseignant.email">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="date" id="dateNaissance"  placeholder="Date de naissance" name="dateNaissance"  [(ngModel)]="data.enseignant.dateNaissance">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="adresse" id="adresse" name="adresse" placeholder="Adresse"  [(ngModel)]="data.enseignant.adresse">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="text" id="login" name="login" placeholder="Login"  [(ngModel)]="data.enseignant.login">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="input">
+          <input matInput type="password" id="motDepasse" name="motDepasse" placeholder="Mot de passe"  [(ngModel)]="data.enseignant.motDepasse">
+          </mat-form-field>
+      </tr> -->
+
+        <mat-form-field class="input">
+          <input matInput type="number" id="cin" name="cin" placeholder="CIN" min="10" max="100"  [(ngModel)]="data.utilisateur.cin">
+        </mat-form-field>
+
+      
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button (click)="dialogClose()">Sauvegarder</button>
+    </div>
+</body> 
+
+</html>

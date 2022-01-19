@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title> creer_une_classe</title>
+</head>
+
+<body>
+  <h2 mat-dialog-title>New Class</h2>
+  <div>
+    <tr>
+      <mat-form-field class="input">
+        <input matInput type="text" id="name" name="name" placeholder="nom de la classe" appearance="standard" required
+          minlength="4" maxlength="80" size="100" [(ngModel)]="data.classe.nomClasse">
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="input">
+        <input matInput type="text" id="niveau de la classe" name="niveau de la classe"
+          placeholder="niveau de la calsse" [(ngModel)]="data.classe.idNiveau">
+      </mat-form-field>
+    </tr>
+
+
+    <tr>
+      <mat-form-field class="input">
+        <input matInput type="number" id="number" name="nombredeseleves" placeholder="nombre des eleves"
+          [(ngModel)]="data.classe.nombreEleve">
+      </mat-form-field>
+    </tr>
+    <div class="footer">
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button (click)="dialogClose()">Sauvegarder</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title> enseignant</title>
+</head>
+<body>
+  <h1>enseignant</h1>
+<<<<<<< HEAD
+=======
+    <div class="div">
+<input matButton class = 'button' type="button"  value="Acceuil">
+  <mat-form-field>        
+      <mat-label>Classe</mat-label>                                                              
+    <mat-select [(ngModel)] ="classeSelectione"  (change)= "NoteEleve()"  >
+
+        <mat-option *ngFor= "let mecClasses of mecClasses " [value]="mecClasses.classe.idClasse">  {{mecClasses.classe.nomClasse}}  </mat-option>
+       
+    </mat-select>
+  </mat-form-field> 
+>>>>>>> 1027e8da1f31a87170a720b6b2d563a43e6abbc9
+  <mat-form-field>
+      <mat-label>Matiere</mat-label>                                                              
+    <mat-select [(ngModel)] ="matiereSelectionee"  (change)="selectionnermatier()" >
+        <mat-option *ngFor= "let mec of matierNonDouble" [value]="mec.matier.idMatier"> {{mec.matier.nomMatier}} </mat-option> 
+    </mat-select>
+</mat-form-field>
+
+<div>
+<mat-form-field>        
+  <mat-label>Classe</mat-label>                                                              
+<mat-select [(ngModel)] ="classeSelectione"  (change)="onClasseSelection1()" >
+
+    <mat-option *ngFor= "let mecClasses of mecClasses " [value]="mecClasses.classe.idClasse">  {{mecClasses.classe.nomClasse}}  </mat-option>
+   
+</mat-select>
+</mat-form-field> 
+</div>
+<ag-grid-angular 
+    style="width: auto; height: 500px;" 
+    class="ag-theme-balham"
+    [rowData]="listresult" 
+    [columnDefs]="columnDefs" > <!-- la liste des colonnes -->
+  </ag-grid-angular>
+  <mat-divider></mat-divider>
+<section>
+  <div class="example-button-row">
+  <button mat-raised-button color="primary" (click)=" enregistrerNote()" >Sauvegarder Note</button>
+  </div>
+</section>
+</body>
+</html>
